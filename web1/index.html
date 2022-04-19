@@ -50,9 +50,15 @@
         .logo {display: block; width: 150px; float: left;}
         .logo img {display: block; width: 100%;}
         #gnb {float: left;}
-        #gnb > ul > li {float: left; padding-left: 50px; padding-right: 20;}
+        #gnb > ul > li {float: left; padding-left: 80px; padding-right: 20;
+        position: relative;}
         #gnb > ul > li > span {display: block; line-height: 30px; cursor: pointer;}
-        #tnb {float: right;}
+        #gnb ul li .sub { display : none; position: absolute; z-index: 999; background-color: black;
+        color: white;}
+        #gnb ul li:hover .sub { display : block; }
+        #gnb ul li .sub li { line-height:  20px; }
+        
+        #tnb { float : right;}
         #content{ clear: both; width: 100%; }
         #ft{ clear: both; width: 100%; }
     </style>
@@ -115,7 +121,7 @@
                 <ul class="img_box">
                     <li>
                         <a href="">
-                            <img src="" alt="">
+                            <img src="./img/banner-1359594279390879-554972.jpg" alt="">
                             <div class="tit_box">
                                 <h2 class="vs_tit">SCIENCE WILL WIN™</h2>
                                 <p class="vs_com">더보기</p>
