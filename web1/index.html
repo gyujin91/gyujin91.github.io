@@ -53,15 +53,32 @@
         #gnb > ul > li {float: left; padding-left: 80px; padding-right: 20;
         position: relative;}
         #gnb > ul > li > span {display: block; line-height: 30px; cursor: pointer;}
+        #gnb > ul > li > span:hover {color: brown; text-decoration: underline;
+        text-underline-position:under;}
         #gnb ul li .sub { display : none; position: absolute; z-index: 999; background-color: white;
         color: black; width: 200px; padding-left: 30px; }
         #gnb ul li:hover .sub { display : block; }
         #gnb ul li .sub li { line-height: 40px; padding-left: 10px;}
+        #gnb ul li .sub li a:hover {color:cadetblue; }
         
         #tnb { float : right; padding-top: 25px; padding-bottom: 20px;}
         #tnb a {padding-left: 15px; font-size: 0.85em;}
+        #tnb a:hover {color:brown; text-decoration: underline; text-underline-position: under;}
+
         #content{ clear: both; width: 100%; }
+        #vs { widows: 100%;  overflow: hidden; }
+        .img_box { width : 500%; }
+        .img_box li { float:left; width:20%; position: relative; }
+        .img_box li a { display: block; }
+        .img_box li a img { display: block; width: 100%; height: auto;}
+        .img_box .tit_box { position: absolute; top:50px; left: 50px; padding-left: 40px;
+        text-shadow: 1px 1px 1px #333; padding-left: 40px;}
+       .vs_tit { font-size: 42px; line-height: 1.6;}
+       .vs_com { font-size: 16px; padding-top: 40px;}
+
+
         #ft{ clear: both; width: 100%; }
+
     </style>
 
     <title>한국 화이자제약</title>
@@ -114,7 +131,7 @@
                         </li>
                     </ul>
                 </nav>
-                <p id="tnb"><a href="">ENG</a><a href="">CHN</a><a href="">VIT</a>
+                <p id="tnb"><a href="">로그인</a><a href="">사이트맵</a><a href="">오시는길</a>
             </div>
         </header>
         <div id="content">
@@ -124,14 +141,15 @@
                         <a href="">
                             <img src="./img/banner-1359594279390879-554972.jpg" alt="">
                             <div class="tit_box">
-                                <h2 class="vs_tit">SCIENCE WILL WIN™</h2>
+                                <h2 class="vs_tit">환자들의 삶을 변화시키는 혁신</h2>
+                                <p class="vs_com">Breakthroughs change patients' lives</p>
                                 <p class="vs_com">더보기</p>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="" alt="">
+                            <img src="./img/home-1-1361915464875739-554977.jpg" alt="">
                             <div class="tit_box">
                                 <h2 class="vs_tit">새로운 소식</h2>
                                 <h3>한국화이자제약의 새로운 소식을 만나보세요</h3>
@@ -141,7 +159,7 @@
                     </li>
                     <li>
                         <a href="">
-                            <img src="" alt="">
+                            <img src="./img/home-2-3431218366893187-574417.jpg" alt="">
                             <div class="tit_box">
                                 <h2 class="vs_tit">한국화이자제약 제품</h2>
                                 <h3>한국화이자제약의 혁신 의약품을 찾아보세요</h3>
@@ -151,7 +169,7 @@
                     </li>
                     <li>
                         <a href="">
-                            <img src="" alt="">
+                            <img src="./img/home-3-1433417021214573-555313.jpg" alt="">
                             <div class="tit_box">
                                 <h2 class="vs_tit">화이자 파이프라인</h2>
                                 <h3>화이자제약이 선보이는 환자들의 삶을 변화시키는 혁신을 확인해보세요</h3>
@@ -161,7 +179,7 @@
                     </li>
                     <li>
                         <a href="">
-                            <img src="" alt="">
+                            <img src="./img/home-4-1361932022898355-554979.jpg" alt="">
                             <div class="tit_box">
                                 <h2 class="vs_tit">사회공헌 활동</h2>
                                 <h3>환자의 치료환경 개선과 지역사회 발전에 기여를 위한 한국화이자제약의 노력을 확인해보세요</h3>
@@ -175,6 +193,21 @@
                 <button class="prev_btn"><i class="xi-long-arrow-left"></i></button>
                 <button class="next_btn"><i class="xi-long-arrow-right"></i></button>
             </div>
+            <script>
+                $(document).ready(function(){
+                    wd = $(window).width();
+                    var intv = setInterval(function(){
+                        ani1();
+                    }, 3000);
+                    function ani1(){
+                        $(".img_box").not(":animated").animate({"margin-left":-wd+"px"}, 600, function(){
+                            $(".img_box li").eq(0).appendTo($(".img_box"));
+                            $(".img_box").css("margin-left","0px");
+                        });
+                    }
+                });    
+                </script>
+
             <div class="grid_box">
                 <ul>
                     <li class="col2">
