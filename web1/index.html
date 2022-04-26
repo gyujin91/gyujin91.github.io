@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,68 +22,390 @@
     <!-- 웹 폰트 -->
     <style>
         @font-face {
-        font-family: 'Gmarket';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
+            font-family: 'Gmarket';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
         }
     </style>
-    
+
     <style>
-    * { margin:0; padding:0;}
-    body, html {font-family: 'Gmarket'}
-    ul { list-style: none;}
-    a {text-decoration: none;}
-    </style>  
-    <style>
-    i[class*='xi'] {font-size: 30px;}
-    i[class*='xi']:hover {color: chocolate;}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            font-family: 'Gmarket'
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
     </style>
-    <!-- 스타일 초기화 모듈 연결 -->  
+    <style>
+        i[class*='xi'] {
+            font-size: 30px;
+        }
+
+        i[class*='xi']:hover {
+            color: chocolate;
+        }
+    </style>
+    <!-- 스타일 초기화 모듈 연결 -->
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- 웹 아이콘 연결 -->
     <!-- XEIcon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <style>
-        .wrap { clear: both; width: 100%; }
-        #hd { clear: both; width: 100%; } 
-        .hd_wrap {clear: both; width: 1280px; margin: 0 auto;}
-        .logo {display: block; width: 150px; float: left;}
-        .logo img {display: block; width: 100%;}
-        #gnb {float: left; margin-top: 21px;}
-        #gnb > ul > li {float: left; padding-left: 80px; padding-right: 20;
-        position: relative;}
-        #gnb > ul > li > span {display: block; line-height: 30px; cursor: pointer;}
-        #gnb > ul > li > span:hover {color: brown; text-decoration: underline;
-        text-underline-position:under;}
-        #gnb ul li .sub { display : none; position: absolute; z-index: 999; background-color: white;
-        color: black; width: 200px; padding-left: 30px; }
-        #gnb ul li:hover .sub { display : block; }
-        #gnb ul li .sub li { line-height: 40px; padding-left: 10px;}
-        #gnb ul li .sub li a:hover {color:cadetblue; }
-        
-        #tnb { float : right; padding-top: 25px; padding-bottom: 20px;}
-        #tnb a {padding-left: 15px; font-size: 0.85em;}
-        #tnb a:hover {color:brown; text-decoration: underline; text-underline-position: under;}
+        .wrap {
+            clear: both;
+            width: 100%;
+        }
 
-        #content{ clear: both; width: 100%; }
-        #vs { widows: 100%;  overflow: hidden; }
-        .img_box { width : 500%; }
-        .img_box li { float:left; width:20%; position: relative; }
-        .img_box li a { display: block; }
-        .img_box li a img { display: block; width: 100%; height: auto;}
-        .img_box .tit_box { position: absolute; top:50px; left: 50px; padding-left: 40px;
-        text-shadow: 1px 1px 1px #333; padding-left: 40px;}
-       .vs_tit { font-size: 42px; line-height: 1.6;}
-       .vs_com { font-size: 16px; padding-top: 40px;}
+        #hd {
+            clear: both;
+            width: 100%;
+        }
 
+        .hd_wrap {
+            clear: both;
+            width: 1280px;
+            margin: 0 auto;
+        }
 
-        #ft{ clear: both; width: 100%; }
+        .logo {
+            display: block;
+            width: 150px;
+            float: left;
+        }
 
+        .logo img {
+            display: block;
+            width: 100%;
+        }
+
+        #gnb {
+            float: left;
+            margin-top: 21px;
+        }
+
+        #gnb>ul>li {
+            float: left;
+            padding-left: 80px;
+            padding-right: 20;
+            position: relative;
+        }
+
+        #gnb>ul>li>span {
+            display: block;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        #gnb>ul>li>span:hover {
+            color: brown;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+
+        #gnb ul li .sub {
+            display: none;
+            position: absolute;
+            z-index: 999;
+            background-color: white;
+            color: black;
+            width: 200px;
+            padding-left: 30px;
+        }
+
+        #gnb ul li:hover .sub {
+            display: block;
+        }
+
+        #gnb ul li .sub li {
+            line-height: 40px;
+            padding-left: 10px;
+        }
+
+        #gnb ul li .sub li a:hover {
+            color: cadetblue;
+        }
+
+        #tnb {
+            float: right;
+            padding-top: 25px;
+            padding-bottom: 20px;
+        }
+
+        #tnb a {
+            padding-left: 15px;
+            font-size: 0.85em;
+        }
+
+        #tnb a:hover {
+            color: brown;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+
+        #content {
+            clear: both;
+            width: 100%;
+        }
+
+        #vs {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .img_box {
+            width: 400%;
+        }
+
+        .img_box li {
+            float: left;
+            width: 25%;
+            position: relative;
+        }
+
+        .img_box li a {
+            display: block;
+        }
+
+        .img_box li a img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .img_box .tit_box {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            color: #fff;
+            text-shadow: 1px 1px 1px #333;
+            padding-left: 40px;
+            z-index: 30;
+        }
+
+        .vs_tit {
+            font-size: 42px;
+            line-height: 1.6;
+        }
+
+        .vs_com {
+            font-size: 16px;
+            padding-top: 40px;
+        }
+
+        .btn_group {
+            position: absolute;
+            bottom: 0px;
+            left: 90px;
+            z-index: 40;
+        }
+
+        .btn_group button {
+            display: block;
+            width: 80px;
+            height: 80px;
+            float: left;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: none;
+            outline: none;
+            color: #fff;
+        }
+
+        .btn_group button i[class*='xi'] {
+            color: #fff;
+        }
+
+        .btn_group button:hover i[class*='xi'] {
+            cursor: pointer;
+            color: gold;
+        }
+
+        .grid_box {
+            clear: both;
+            width: 100%;
+        }
+
+        .grid_wrap {
+            clear: both;
+            width: 100%;
+        }
+
+        .grid_wrap li {
+            float: left;
+            height: 16.66667vw;
+            background-position: center center;
+        }
+
+        .grid_wrap li.item1 {
+            background-color: #d0dee8;
+        }
+
+        .grid_wrap li.item2 {
+            background-color: #e5edf3;
+        }
+
+        .grid_wrap li.item3 {
+            background-color: #f2f6f9
+        }
+
+        .grid_wrap li.item4 {
+            background-image: url("./img/product_oled.jpg");
+        }
+
+        .grid_wrap li.item6 {
+            background-image: url("./img/main_OLED.jpg");
+        }
+
+        .grid_wrap li.item5 {
+            background-image: url("./img/product_qd.jpg");
+        }
+
+        .col1 {
+            width: 8.33333%;
+        }
+
+        .col2 {
+            width: 16.66667%;
+        }
+
+        .col3 {
+            width: 25%;
+        }
+
+        .col4 {
+            width: 33.33333%;
+        }
+
+        .col5 {
+            width: 41.66667%;
+        }
+
+        .col6 {
+            width: 50%;
+        }
+
+        .grid_wrap li a {
+            display: block;
+            padding: 28px;
+        }
+
+        .col_tit,
+        .col_com {
+            color: #000;
+        }
+
+        .col_tit {
+            padding-top: 18px;
+        }
+
+        .col_tit.w,
+        .col_com.w {
+            color: #fff;
+            text-shadow: 1px 1px 1px #333;
+        }
+
+        .col_tit.w {
+            padding-top: 0;
+        }
+
+        .arrow {
+            display: block;
+            margin-top: 50px;
+        }
+
+        .arrow:before {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 5px;
+            border-bottom: 3px solid #555;
+            float: left;
+            transition: 0.4s;
+        }
+
+        .arrow:after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 8px;
+            background-image: url("./img/newsletter_arrow_black.png");
+            float: left;
+        }
+
+        .col_com {
+            font-size: 12px;
+            padding-top: 20px;
+            font-weight: 200;
+        }
+
+        .grid_wrap li:hover a .arrow:before {
+            width: 18px;
+        }
+
+        #ft {
+            clear: both;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        .ft_wrap {
+            clear: both;
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+        .fnb {
+            float: left;
+        }
+
+        .fnb a {
+            display: block;
+            float: left;
+            margin: 14px;
+            margin-left: 0;
+            margin-right: 28px;
+            font-size: 12px;
+        }
+
+        .fnb a:after {
+            content: "|";
+            padding-left: 28px;
+        }
+
+        .fnb a:last-child::after {
+            content: "";
+        }
+
+        .snb {
+            float: right;
+        }
+
+        .snb ul li {
+            float: left;
+            margin-left: 28px;
+        }
+
+        .copyright {
+            clear: both;
+            padding-bottom: 28px;
+            font-size: 12px;
+        }
     </style>
 
     <title>한국 화이자제약</title>
 </head>
+
 <body>
     <div class="wrap">
         <header id="hd">
@@ -102,7 +425,7 @@
                                 <li><a href="">비전 및 미션</a></li>
                                 <li><a href="">핵심가치</a></li>
                                 <li><a href="">윤리경영</a></li>
-                                <li><a href="">찾아오시는  길</a></li>
+                                <li><a href="">찾아오시는 길</a></li>
                             </ul>
                         </li>
                         <li>
@@ -194,78 +517,87 @@
                 <button class="next_btn"><i class="xi-long-arrow-right"></i></button>
             </div>
             <script>
-                $(document).ready(function(){
+                $(document).ready(function () {
                     wd = $(window).width();
-                    var intv = setInterval(function(){
+                    var intv = setInterval(function () {
                         ani1();
                     }, 3000);
-                    function ani1(){
-                        $(".img_box").not(":animated").animate({"margin-left":-wd+"px"}, 600, function(){
+                    function ani1() {
+                        $(".img_box").not(":animated").animate({ "margin-left": -wd + "px" }, 600, function () {
                             $(".img_box li").eq(0).appendTo($(".img_box"));
-                            $(".img_box").css("margin-left","0px");
+                            $(".img_box").css("margin-left", "0px");
                         });
                     }
+                    function ani2() {
+                        $(".img_box").css("margin-left", -wd + "px");
+                        $(".img_box li:last-child").prependTo($(".img_box"));
+                        $(".img_box").not(":animated").animate({ "margin-left": "0px" }, 600);
+                    }
+                    $(".btn_group .next_btn").click(function () {
+                        clearInterval(intv);
+                        ani1();
+                        intv = setInterval(function () { ani1(); }, 3000);
+                    });
+                    $(".btn_group .prev_btn").click(function () {
+                        clearInterval(intv);
+                        ani2();
+                        intv = setInterval(function () { ani1(); }, 3000);
+                    });
                 });    
-                </script>
+            </script>
 
             <div class="grid_box">
-                <ul>
-                    <li class="col2">
+                <ul class="grid_wrap">
+                    <li class="col2 item1">
                         <a href="">
-                            <h3 class="col_tit">입랜스 전액본인 부담 환자 약제비 환급ㆍ지원 사업안내</h3>
+                            <h3 class="col_tit">입랜스 전액본인부담 환자 약제비 환급 . 지원 사업 안내</h3>
                             <p class="col_com">더보기</p>
                             <span class="arrow"></span>
-                        </a></li>
-                    <li class="col2">
+                        </a>
+                    </li>
+                    <li class="col2 item2">
                         <a href="">
                             <h3 class="col_tit">한국화이자제약 지출보고서</h3>
                             <p class="col_com">더보기</p>
                             <span class="arrow"></span>
-                        </a></li>
-                    <li class="col2">
+                        </a>
+                    </li>
+                    <li class="col2 item3">
                         <a href="">
                             <h3 class="col_tit">화이자 의학 정보실 의학정보 문의 및 검색</h3>
                             <p class="col_com">더보기</p>
                             <span class="arrow"></span>
-                        </a></li>
-
-                    <li class="col2">
-                        <a href="">
-                            <h3 class="col_w_tit">비아트리스 코리아 제품 정보 이관 및 문의 안내</h3>
-                            <p class="col_w_com">더보기</p>
                         </a>
                     </li>
-                    <li class="col2">
+                    <li class="col2 item4">
                         <a href="">
-                            <h3 class="col_w_tit"></h3>
-                            <p class="col_w_com"></p>
+                            <h3 class="col_tit w">비아트리스 코리아 제품 정보 이관 및 문의 안내</h3>
+                            <p class="col_com w">더보기</p>
                         </a>
                     </li>
-                    <li class="col2">
+                    <li class="col2 item5">
                         <a href="">
-                            <h3 class="col_w_tit"></h3>
-                            <p class="col_w_com"></p>
+                            <h3 class="col_tit w"></h3>
+                            <p class="col_com w"></p>
+                        </a>
+                    </li>
+                    <li class="col2 item6">
+                        <a href="">
+                            <h3 class="col_tit w"></h3>
                         </a>
                     </li>
                 </ul>
             </div>
-        </div>
+        </div>    
         <footer id="ft">
             <div class="ft_warp">
                 <nav class="fnb">
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                </nav>
-                <nav class="snb">
-                    <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                    </ul>
+                    <a href="">사이트맵</a>
+                    <a href="">Contact US</a>
+                    <a href="">회원약관</a>
+                    <a href="">개인정보처리방침</a>
+                    <a href="">보안신고센터</a>
+                    <a href="">협력사</a>
                 </nav>
                 <nav class="snb">
                     <ul>
@@ -280,16 +612,19 @@
                         </li>
                     </ul>
                 </nav>
-                
-                
-               
+
+
+
 
                 <p class="copyright">
-                    © Pfizer Ltd. 2007-2021 All rights reserved. The products discussed herein may have different labeling in different countries. 
-This information – including product information – is intended only for residents of the Republic of Korea.
+                    © Pfizer Ltd. 2007-2021 All rights reserved. The products discussed herein may have different
+                    labeling in different countries.
+                    This information – including product information – is intended only for residents of the Republic of
+                    Korea.
                 </p>
             </div>
         </footer>
-    </div>
+        </div>
 </body>
+
 </html>
