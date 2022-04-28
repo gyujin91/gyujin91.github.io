@@ -16,8 +16,8 @@ i[class*='xi']:hover { color:rgb(226, 55, 25); }
     /*   position:fixed; top: 0; left: 0; height:60px; z-index:999;
     background-color: rgba(255,255,255,0.75);  */     }
 .hd_wrap { clear:both; width: 1280px; margin: 0 auto; }
-.logo { display:block; width: 150px; float:left; margin-top: 20px;  }
-.logo img { display:block; width: 100%; }
+.logo { display:block; width: 250px; float:left; margin-top: 20px;  }
+.logo img { display:block; width: 150px; height: 50px;}
 #gnb { float:left; margin-top: 22px; }
 #gnb > ul > li { float:left; padding-left: 50px; padding-right: 20px; 
 position:relative;   }
